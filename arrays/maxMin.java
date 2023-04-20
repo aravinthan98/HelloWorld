@@ -8,7 +8,6 @@ public class maxMin {
 
         int A=sc.nextInt();
         int N=sc.nextInt();
-
         int count=A;
         while(N-->0){
             int sum=count;
@@ -27,12 +26,11 @@ public class maxMin {
 
                 sum = sum / 10;
             }
-
-
             count=count+(m*n);
+            if(n==0){
+                break;
+            }
         }
-
-
         System.out.print(count);
         // Your code here
     }

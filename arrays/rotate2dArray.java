@@ -2,9 +2,10 @@ package arrays;
 import java.util.Scanner;
 public class rotate2dArray {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int m=2;
-        int n=2;
+        Scanner sc=new Scanner(System.in);  //1 2 3   >   1 4 7                             7 4 1     9 8 7
+                                            //4 5 6   >   2 5 8                             8 5 2 >   6 5 4
+        int m=3;                            //7 8 9   >   3 6 9                             9 6 3     3 2 1
+        int n=3;
         int[][] arr=new int[m][n];
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -20,27 +22,31 @@ public class dsa2test1 {
 //        else{
 //            System.out.print("false");
 //        }
-        int[] arr={4,5,6,7,7};
+        int[] arr={3,4,5,3,6,8};
+        Arrays.sort(arr);
+
         int n=arr.length;
 
-        HashMap<Integer,Integer>map=new HashMap<>();
+        ArrayList<Integer>list=new ArrayList<>();
+        ArrayList<Integer>list1=new ArrayList<>();
         int rep=0;
         int mis=0;
         int i=arr[0];
         int h=i+n;
         for(int j=0;j<n;j++){
-            if(map.containsKey(arr[j])){
-                rep=arr[j];
-                break;
+            if(list1.contains(arr[j])){
+                list.add(arr[j]);
+
             }
             else{
-                map.put(arr[j],1);
+                list1.add(arr[j]);
             }
         }
-        System.out.print(rep+" ");
+        System.out.println(list);
+
 
         while(i<h){
-            if(!map.containsKey(i)){
+            if(!list1.contains(i)){ //3 4 5 6 8
                 mis=i;
                 break;
             }

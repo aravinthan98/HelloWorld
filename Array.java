@@ -6,11 +6,20 @@ public class Array {
         String[] s={"zero","one","second","three","four","five","six","seven","eight","nine"};
         String str=Integer.toString(N);
         int len=str.length();
+        int[] a=new int[10];
+        int r=0;
 
+        while(N>0){
+            r=N%10;
+            a[0]=1;
+
+        }
 
         for(int i=0;i<len;i++){
             System.out.print(s[i] +" ");
         }
 
     }
+
+
 }

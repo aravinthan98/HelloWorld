@@ -1,6 +1,6 @@
 public class aravinth {
     public static void main(String[] args) {
-        int N=123;
+        int N=121;
          int[] digit=new int[10];
          int a=0;
          while(N!=0){
