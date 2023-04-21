@@ -57,7 +57,52 @@ class klinkedlist {
         }
         System.out.println();
     }
+    public Node addTwoNumbers(Node l1, Node l2) {
+//Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+//Output: [8,9,9,9,0,0,0,1]
+        Node result = new Node(0);
+        Node ans2 = result;
 
+        int cary=0;
+        int res=0;
+        while (l1 != null && l2 != null) {
+            int n =l1.val;
+            int n2 = l2.val;
+            res=n+n2;
+            res=res+cary;
+            cary=res/10;
+            res=res%10;
+            ans2.next = new Node(res);
+            ans2 = ans2.next;
+
+            l1=l1.next;
+            l2=l2.next;
+        }
+        while(l1 !=null){
+            int n =l1.val;
+            res=n+cary;
+            cary=res/10;
+            res=res%10;
+            ans2.next = new Node(res);
+            ans2 = ans2.next;
+            l1=l1.next;
+        }
+        while(l2 !=null){
+            int n2 = l2.val;
+            res=n2+cary;
+            cary=res/10;
+            res=res%10;
+            ans2.next = new Node(res);
+            ans2 = ans2.next;
+            l2=l2.next;
+        }
+        if(cary!=0){
+            ans2.next = new Node(cary);
+        }
+
+
+        return result.next;
+    }
     public static void main(String[] args) {
         klinkedlist linkedlist=new klinkedlist();
         linkedlist.addfirst(5);
@@ -73,9 +118,10 @@ class klinkedlist {
 
 
 
-       linkedlist1.head=new klinkedlist().mergelist(linkedlist.head,linkedlist1.head);
-       linkedlist1.display();
-
+//       linkedlist1.head=new klinkedlist().mergelist(linkedlist.head,linkedlist1.head);
+//       linkedlist1.display();
+       linkedlist1.head=new klinkedlist().addTwoNumbers(linkedlist1.head,linkedlist.head);
+        linkedlist1.display();
 
 
 
