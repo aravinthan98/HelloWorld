@@ -18,7 +18,7 @@ public class mergeArraylist {
         }
         int ind = sc.nextInt();
 
-            list.addAll(ind,list1);
+            list.addAll(ind,list1);// 1 2 3 4 5 6=1 3 4 5 67 2 3 4 5 6
 
         for (int i=0;i<list.size();i++){
 

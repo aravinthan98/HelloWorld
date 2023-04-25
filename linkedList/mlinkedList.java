@@ -16,7 +16,7 @@ public class mlinkedList {
     }
     public void addfirst(int k){
         Node newNode=new Node(k);
-        Node temp=head;
+        Node temp=head;//
 
             newNode.prev=null;
             newNode.next=head;

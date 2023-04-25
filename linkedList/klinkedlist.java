@@ -16,7 +16,7 @@ class klinkedlist {
     public  void addfirst(int k){
         Node dummyNode=new Node(k);
         Node temp=head;
-        if(temp==null){
+        if(temp==null){//
             dummyNode.next=null;
             head=dummyNode;
 

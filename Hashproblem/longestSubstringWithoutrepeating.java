@@ -16,7 +16,7 @@ public class longestSubstringWithoutrepeating {
         int max=0;
         for(int i=0;i<n;i++){
 
-                if (map.containsKey(s.charAt(i))) {
+                if (map.containsKey(s.charAt(i))) {//abcadf
                     count = Math.max(count, map.get(s.charAt(i)) + 1);
 
                 }
