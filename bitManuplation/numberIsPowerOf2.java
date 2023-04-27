@@ -2,7 +2,7 @@ package bitManuplation;
 
 public class numberIsPowerOf2 {
     public static void main(String[] args) {
-        int n=4;
+        int n=8;
         System.out.print(Ispowerof2(n));
     }
      public static boolean Ispowerof2(int n){

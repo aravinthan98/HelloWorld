@@ -25,32 +25,55 @@ public class sort1s2s0s {
 //        }
 //
 //            System.out.print(list);
-        int l=0;
-        int h= arr.length-1;
-        int mid=0;
-        while (mid<=h) {
-            switch (arr[mid]) {
-                case 0:
-                    int temp = arr[mid];
-                    arr[mid] = arr[l];
-                    arr[l] = temp;
-                    l++;
-                    mid++;
-                    break;
-                case 1:
-                    mid++;
-                    break;
-                case 2:
-                    temp = arr[mid];
-                    arr[mid] = arr[h];
-                    arr[h] = temp;
-                    h--;
-                    break;
+//        int l=0;
+//        int h= arr.length-1;
+//        int mid=0;
+//        while (mid<=h) {
+//            switch (arr[mid]) {
+//                case 0:
+//                    int temp = arr[mid];
+//                    arr[mid] = arr[l];
+//                    arr[l] = temp;
+//                    l++;
+//                    mid++;
+//                    break;
+//                case 1:
+//                    mid++;
+//                    break;
+//                case 2:
+//                    temp = arr[mid];
+//                    arr[mid] = arr[h];
+//                    arr[h] = temp;
+//                    h--;
+//                    break;
+//            }
+//
+//        }
+//        util.printArrays(arr);
+        moveZeroes(arr);
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+
+    }
+    public static void moveZeroes(int[] nums) {//move zeros to last
+        ArrayList<Integer>list=new ArrayList<>();
+        int count=0;
+        for(int i=nums.length-1;i>=0;i--){
+
+            if(nums[i]!=0){
+                list.add(0,nums[i]);
+                count++;
+            }
+            else{
+                list.add(count,nums[i]);
+                count++;
             }
 
         }
-        util.printArrays(arr);
-
+        for(int i=0;i<nums.length;i++){
+            nums[i]=list.get(i);
+        }
 
     }
 }

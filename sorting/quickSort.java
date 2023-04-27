@@ -26,7 +26,7 @@ public class quickSort {
             // of pivot found so far
             int i = (low - 1);
 
-            for (int j = low; j <= high - 1; j++) {
+            for (int j = low; j <= high - 1; j++) {//10, 7, 8, 9, 1, 5-> 1 5 7 9 10 8
 
                 // If current element is smaller
                 // than the pivot

@@ -6,7 +6,7 @@ public class mergsort {
     static int count;
 
     public static void main(String[] args) {
-        int[] arr = {5,4,3,2,1};
+        int[] arr = {5,4,3,2,1,8,6,9,7};
         int n = arr.length;
         divideArray(arr, 0, n - 1);
         util.printArrays(arr);

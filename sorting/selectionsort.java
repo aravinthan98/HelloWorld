@@ -7,11 +7,11 @@ public class selectionsort {
         int[] arr = {5, 4, 1, 6, 9, 7, 3};
         int n = arr.length;
 
-        for(int i = 0; i < n; ++i) {
+        for(int i = 0; i < n-1; ++i) {
             int low = i;
 
             for(int j = i + 1; j < n; ++j) {
-                if (arr[low] > arr[j]) {
+                if (arr[j] < arr[low]) {
                     low = j;
                 }
             }
