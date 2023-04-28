@@ -16,6 +16,7 @@ public class RepeatedStringMatch686 {
             sb.append(a);
             t--;
         }
+
         //String s=String.join("",Collection.nCopies(n,a));
         // we can this instead of while loop to add string n times
         String s=sb.toString();
