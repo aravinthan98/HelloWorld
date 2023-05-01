@@ -7,7 +7,7 @@ public class positionfind {
 
 
         int[] nums = {1, 2, 2, 3, 3, 3, 5, 5, 5, 5, 5, 7};
-        int target = 9;
+        int target = 3;
         int arr[]=new int[2];
         arr[1]=searchInsert(nums,target);
         arr[0]=searchInsert1(nums,target);

@@ -14,9 +14,12 @@ public class mintcutTree {
         int sum = 0;
         for (int i = n - 1; i >= 0; i--)
         {
-            if (height[i] - m <= 0)
+            if (height[i] - m <= 0) {
                 break;
-            sum += (height[i] - m);
+            }
+            else {
+                sum += (height[i] - m);
+            }
         }
         return sum;
     }

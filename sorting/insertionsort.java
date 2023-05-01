@@ -18,7 +18,7 @@ public class insertionsort {
                 int j=i-1;//5
 
                 while(j>=0 && arr[j]>key) {
-                        arr[j+1] =arr[j]; // 1 4 5
+                        arr[j+1] =arr[j]; // 1  5
                         j=j-1;
                 }
                 arr[j+1]=key;
