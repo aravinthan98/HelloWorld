@@ -9,11 +9,13 @@ class nLinkedlist {
         Node tail;
     class Node {
         Node next;
+        Node random;
         int val;
 
         Node(int d) {
             val = d;
             next=null;
+            random=null;
         }
     }
     nLinkedlist(){
@@ -226,6 +228,51 @@ class nLinkedlist {
         head=newhead;
 
     }
+    public Node CloneList(Node head) {
+        Node iter = head;
+        Node front = head;
+
+        // First round: make copy of each node,
+        // and link them together side-by-side in a single list.
+        while (iter != null) {
+            front = iter.next;
+
+            Node copy = new Node(iter.val);
+            iter.next = copy;
+            copy.next = front;
+
+            iter = front;
+        }
+
+        // Second round: assign random pointers for the copy nodes.
+        iter = head;
+        while (iter != null) {
+            if (iter.random != null) {
+                iter.next.random = iter.random.next;
+            }
+            iter = iter.next.next;
+        }
+
+        // Third round: restore the original list, and extract the copy list.
+        iter = head;
+        Node pseudoHead = new Node(0);
+        Node copy = pseudoHead;
+
+        while (iter != null) {
+            front = iter.next.next;
+
+            // extract the copy
+            copy.next = iter.next;
+            copy = copy.next;
+
+            // restore the original list
+            iter.next = front;
+
+            iter = front;
+        }
+
+        return pseudoHead.next;
+    }
 
     public void print(){
         Node temp=head;
@@ -287,9 +334,11 @@ class nLinkedlist {
 //        linklist.print();
 
 //        linklist.hasCycle();
+//
+//        System.out.println();
+//        linklist.rotatektimes(4);
 
-        System.out.println();
-        linklist.rotatektimes(4);
+//        linklist.head= new nLinkedlist().CloneList(linklist.head);
         linklist.print();
 
 

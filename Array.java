@@ -2,7 +2,8 @@
 
 public class Array {
     public static void main(String[] args) {
-        int N=134;
+        int N=0;
+
         String[] s={"zero","one","second","three","four","five","six","seven","eight","nine"};
         String str=""+N;
         int len=str.length();
