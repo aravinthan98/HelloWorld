@@ -273,6 +273,31 @@ class nLinkedlist {
 
         return pseudoHead.next;
     }
+    public Node oddEvenList(Node head) {
+        Node temp=head;
+        Node newNode=new Node(0);
+        Node newNode1=new Node(0);
+        Node copy=newNode;
+        Node copy1=newNode1;
+        int ind=1;
+        while(temp!=null){
+            if(ind%2!=0){
+                copy.next=temp;
+                copy=copy.next;
+                temp=temp.next;
+            }
+            else{
+                copy1.next=temp;
+                copy1=copy1.next;
+                temp=temp.next;
+            }
+            ind++;
+        }
+        copy1.next=null;
+        copy.next=newNode1.next;
+
+        return newNode.next;
+    }
 
     public void print(){
         Node temp=head;
@@ -339,6 +364,8 @@ class nLinkedlist {
 //        linklist.rotatektimes(4);
 
 //        linklist.head= new nLinkedlist().CloneList(linklist.head);
+        linklist.head= new nLinkedlist().oddEvenList(linklist.head);
+
         linklist.print();
 
 
