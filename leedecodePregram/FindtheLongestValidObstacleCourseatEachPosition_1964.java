@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class FindtheLongestValidObstacleCourseatEachPosition_1964 {
     public static void main(String[] args) {
-        int[] arr={1,2,3,2};//{3,1,5,6,4,2};//{5,1,5,5,1,3,4,5,1,4};
+        int[] arr={5,1,5,5,1,3,4,5,1,4};//{1,2,3,2};//{3,1,5,6,4,2};
         arr=longestObstacleCourseAtEachPosition(arr);
         util.printArrays(arr);
     }

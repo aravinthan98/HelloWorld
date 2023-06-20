@@ -3,6 +3,9 @@ package string;
 public class lengthOfLastWord {
     public static void main(String[] args) {
           String s = "Hello World  ";
+          char ch='c';
+
+          System.out.print(Character.toUpperCase(ch));
         int k=s.length();
         System.out.println(s.charAt(k-3));
         System.out.println(lengthofLastWord(s));
