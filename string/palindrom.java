@@ -1,3 +1,5 @@
+package string;
+
 public class palindrom {
     public static void main(String[] args) {
 /*        String original,reverse="";

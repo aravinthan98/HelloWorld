@@ -1,3 +1,5 @@
+package Newtonschool_assignment;
+
 import java.util.Scanner;
 
 public class happyDiwali {

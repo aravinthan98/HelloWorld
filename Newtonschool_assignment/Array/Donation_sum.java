@@ -1,4 +1,4 @@
-package Newtonschool_assignment.basic_programming;
+package Newtonschool_assignment.Array;
 
 import java.util.Scanner;
 //After the decimation, the world went into chaos. People had to rebuild the planet so Shield
