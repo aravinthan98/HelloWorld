@@ -16,6 +16,7 @@ public class zigzagConversionleedcode6 {
     }
     public static String convert(String s, int numRows) {
         StringBuilder sb = new StringBuilder();
+
         int n=s.length();
         if(numRows==1){
             return s;

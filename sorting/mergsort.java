@@ -12,16 +12,14 @@ public class mergsort {
         util.printArrays(arr);
     }
 
-    public static void divideArray(int[] arr, int l, int r) {
+    public static void divideArray(int[] arr, int l, int r) {//l=0   r=8
         if (l < r) {
             int mid = (l + r) / 2;
             divideArray(arr, l, mid);
             divideArray(arr, mid + 1, r);
             mergearray(arr, l, mid, r);
         }
-
     }
-
     public static void mergearray(int[] arr, int l, int mid, int r) {
         int[] merge = new int[r - l + 1];
         int p1 = l;
@@ -35,7 +33,6 @@ public class mergsort {
                 merge[x++] = arr[p2++];
             }
         }
-
         while(p1 <= mid) {
             merge[x++] = arr[p1++];
         }
@@ -48,8 +45,7 @@ public class mergsort {
 
         for(int j = l; i < merge.length; ++j) {
             arr[j] = merge[i];
-            ++i;
+            i++;
         }
-
     }
 }
