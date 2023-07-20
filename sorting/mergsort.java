@@ -43,7 +43,7 @@ public class mergsort {
 
         int i = 0;
 
-        for(int j = l; i < merge.length; ++j) {
+        for(int j = l; i < merge.length; j++) {
             arr[j] = merge[i];
             i++;
         }

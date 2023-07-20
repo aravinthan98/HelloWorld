@@ -6,7 +6,7 @@ import util.com.util;
 public class insertionsort {
 
         public static void main(String[] args) {
-            int[] arr = {5, 4, 1, 6, 9, 7, 3};// 4 5 1
+            int[] arr = {2,5, 4, 1, 6, 9, 7, 3};// 4 5 1
             int n = arr.length;
             sortElement(arr, n);
             util.printArrays(arr);

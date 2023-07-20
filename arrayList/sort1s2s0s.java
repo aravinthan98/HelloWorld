@@ -58,16 +58,21 @@ public class sort1s2s0s {
     }
     public static void moveZeroes(int[] nums) {//move zeros to last
         ArrayList<Integer>list=new ArrayList<>();
-        int count=0;
+        int index=0;
+
         for(int i=nums.length-1;i>=0;i--){
 
-            if(nums[i]!=0){
-                list.add(0,nums[i]);
-                count++;
+            if(nums[i]==2){
+                list.add(nums[i]);
+
+            }
+            else if(nums[i]==1){
+                list.add(index,nums[i]);
+                index++;
             }
             else{
-                list.add(count,nums[i]);
-                count++;
+                list.add(0,nums[i]);
+                index++;
             }
 
         }

@@ -1,6 +1,7 @@
 package string;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 //given two string need to remove common char in both string but we can remove equal number of ch,then remainig
 //length of string we can use for flames like 1-friends,2-love
@@ -11,6 +12,7 @@ public class flams {
         ArrayList<Character>list1=new ArrayList<>();
         String s1="saumya";
         String s2="ansh";
+        char[] arr=s2.toCharArray();
 
         for(int i=0;i<s1.length();i++){
             list.add(s1.charAt(i));

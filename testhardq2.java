@@ -4,47 +4,41 @@ public class testhardq2 {
                                         // 4 3 9
         int Y[] = { 2, 3, 9 };
 
-        int p1=0;
-        int p2=0;
-        int n=X.length;
-        int m=Y.length;
+        int xarrindex=0;
+        int yarrindex=0;
+        int itr=0;
+        int xarrlen=X.length;
+        int yarrlen=Y.length;
 
+        int[] mergearr=new int[xarrlen+yarrlen];//1 2 3
+        while (xarrindex<xarrlen && yarrindex<yarrlen){
+            if(X[xarrindex]<=Y[yarrindex]){
+                mergearr[itr++]=X[xarrindex++];
+            }
+           else {
+                mergearr[itr++]=Y[yarrindex++];
+            }
+        }
+        while(xarrindex<xarrlen){
+            mergearr[itr++]=X[xarrindex++];
+        }
+        while(yarrindex<yarrlen){
+            mergearr[itr++]=Y[yarrindex++];
+        }
 
-//        while (p1<=n&&p2<=m){
-//            if(X[p1]>Y[p2]){
-//
-//                int temp=X[p1];
-//                X[p1]=Y[p2];
-//                Y[p2]=temp;
-//
-//                p2++;
-//            }
-//           else {
-//               p1++;
-//            }
-//        }
-//        while(p1<=n){
-//            int temp=X[p1];
-//            X[p1]=Y[p2];
-//            Y[p2]=temp;
-//        }
-
-
-      for(int i=0;i<n;i++){
-
-          for(int j=0;j<m;j++){
-              if(X[i]>Y[j]){
-                  int temp=X[i];
-                  X[i]=Y[j];
-                  Y[j]=temp;
-              }
-          }
+      for(int i=0;i<mergearr.length;i++){
+        if(i<xarrlen){
+            X[i]=mergearr[i];
+        }
+        else{
+            Y[i-xarrlen]=mergearr[i];
+        }
       }
-        for(int i=0;i<n;i++){
+        for(int i=0;i<xarrlen;i++){
             System.out.print(X[i]+" ");
         }
         System.out.println();
-        for(int i=0;i<m;i++){
+        for(int i=0;i<yarrlen;i++){
             System.out.print(Y[i]+" ");
         }
 

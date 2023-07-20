@@ -9,6 +9,6 @@ public class Foctorialfunc {
         if(n==1){
             return 1;
         }
-        return n+foctorial(n-1);
+        return n*foctorial(n-1);
     }
 }
