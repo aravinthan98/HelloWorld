@@ -27,7 +27,7 @@ public class rough {
         String res=ans.replaceAll("a","");
         res=res.replaceAll("n","");
 
-
+        System.out.print('a');
 
         System.out.println(ans.isEmpty());
     }
