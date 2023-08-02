@@ -6,6 +6,7 @@ import java.util.List;
 public class Pascals_Triangle_118 {
     public static void main(String[] args) {
         int n=5;
+
         List<List<Integer>> gene=generate(n);
         System.out.print(gene);
     }
