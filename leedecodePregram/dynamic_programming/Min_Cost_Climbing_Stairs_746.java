@@ -9,7 +9,6 @@ public class Min_Cost_Climbing_Stairs_746 {
         int[] cost={10,15,20};
         int dp1=cost[1];
         int dp2=cost[0];
-
         for(int i=2;i<cost.length;i++){
             int dp0=(dp1<dp2?dp1:dp2) +cost[i];
 
